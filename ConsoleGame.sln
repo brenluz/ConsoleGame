@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entiti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGame", "ConsoleGame\ConsoleGame.csproj", "{E02E5616-7E7D-4D28-938A-DCA8785E45C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{9F5A7B34-D3C3-47D1-B2C3-9F3A76BB2A5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{D198C79E-F50F-4D28-ABA4-CD158CE0A129}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{E02E5616-7E7D-4D28-938A-DCA8785E45C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E02E5616-7E7D-4D28-938A-DCA8785E45C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E02E5616-7E7D-4D28-938A-DCA8785E45C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F5A7B34-D3C3-47D1-B2C3-9F3A76BB2A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F5A7B34-D3C3-47D1-B2C3-9F3A76BB2A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F5A7B34-D3C3-47D1-B2C3-9F3A76BB2A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F5A7B34-D3C3-47D1-B2C3-9F3A76BB2A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D198C79E-F50F-4D28-ABA4-CD158CE0A129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D198C79E-F50F-4D28-ABA4-CD158CE0A129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D198C79E-F50F-4D28-ABA4-CD158CE0A129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D198C79E-F50F-4D28-ABA4-CD158CE0A129}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

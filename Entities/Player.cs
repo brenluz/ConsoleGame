@@ -10,13 +10,25 @@ public class Player
     public int Attack { get; set; }
     public int Defense { get; set; }
     public int Speed { get; set; }
+    public int Gold { get; set; }
 
-    // -- TODO: Implementar sistema de inventário
-    // public virtual IList<BaseItem> Inventory { get; set; }
-    // public virtual IList<BaseItem> EquippedItems { get; set; }
+
+    public IList<BaseItem> Inventory { get; set; }
+    public IList<BaseItem> EquippedItems { get; set; }
     
-    public Player(string name)
+    public Player(int id, string name)
     {
+        Id = id;
         Name = name;
+        Level = 1;
+        Hp = 100;
+        Attack = 10;
+        Defense = 10;
+        Speed = 10;
+        Gold = 0;
+        
+        Inventory = new List<BaseItem>();
+        EquippedItems = new List<BaseItem>();
+        
     }   
 }
