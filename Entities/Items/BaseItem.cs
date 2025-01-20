@@ -16,13 +16,13 @@ public class BaseItem: IIdentifiable
     
     public Modifiers Modifier { get; set; }
     
-    public BaseItem(int id, string name, int value, Rarities rarity, int level, string description, int hp = 0, int attack = 0, int defense = 0, int speed = 0, Modifiers modifier = Modifiers.Normal)
+    public BaseItem(int id, string name, int value, Rarities rarity, string description, int hp = 0, int attack = 0, int defense = 0, int speed = 0, Modifiers modifier = Modifiers.Normal)
     {
         Id = id;
         Name = name;
         Value = value;
         Rarity = rarity;
-        Level = level;
+        Level = 1;
         Description = description;
         
         Hp = hp;
