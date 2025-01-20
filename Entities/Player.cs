@@ -1,4 +1,6 @@
-﻿namespace Entities;
+﻿using Entities.Items;
+
+namespace Entities;
 
 public class Player
 {
@@ -7,9 +9,9 @@ public class Player
     public int Level { get; set; }
         
     public int Hp { get; set; }
-    public int Attack { get; set; }
-    public int Defense { get; set; }
-    public int Speed { get; set; }
+    private int Attack { get; set; }
+    private int Defense { get; set; }
+    private int Speed { get; set; }
     public int Gold { get; set; }
 
 
@@ -28,7 +30,42 @@ public class Player
         Gold = 0;
         
         Inventory = new List<BaseItem>();
-        EquippedItems = new List<BaseItem>();
-        
+        EquippedItems = new List<BaseItem>(5);
     }   
+    
+    public void EquipItem(BaseItem item)
+    {
+        if (EquippedItems.Count >= 5)
+        {
+            Console.WriteLine("You can't equip more than 5 items");
+            return;
+        }
+        EquippedItems.Add(item);
+        Hp += item.Hp;
+        Attack += item.Attack;
+        Defense += item.Defense;
+        Speed += item.Speed;
+        Console.WriteLine($"You successfully equipped the {item.Name}");
+    }
+    
+    public void UnequipItem(BaseItem item)
+    {
+        if(!EquippedItems.Contains(item))
+        {
+            Console.WriteLine("You don't have this item equipped");
+            return;
+        }
+        EquippedItems.Remove(item);
+        Hp -= item.Hp;
+        Attack -= item.Attack;
+        Defense -= item.Defense;
+        Speed -= item.Speed;
+        Console.WriteLine($"You successfully unequipped the {item.Name}");
+    }
+    
+    public void AddItemToInventory(BaseItem item)
+    {
+        Inventory.Add(item);
+        Console.WriteLine($"The {item.Name} was added to your inventory");
+    }
 }

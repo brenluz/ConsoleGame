@@ -1,4 +1,4 @@
-﻿namespace Entities;
+﻿namespace Entities.Items;
 
 public class BaseItem: IIdentifiable
 {
@@ -14,7 +14,9 @@ public class BaseItem: IIdentifiable
     public int Defense { get; set; }
     public int Speed { get; set; }
     
-    public BaseItem(int id, string name, int value, Rarities rarity, int level, string description, int hp = 0, int attack = 0, int defense = 0, int speed = 0)
+    public Modifiers Modifier { get; set; }
+    
+    public BaseItem(int id, string name, int value, Rarities rarity, int level, string description, int hp = 0, int attack = 0, int defense = 0, int speed = 0, Modifiers modifier = Modifiers.Normal)
     {
         Id = id;
         Name = name;
@@ -27,5 +29,7 @@ public class BaseItem: IIdentifiable
         Attack = attack;
         Defense = defense;
         Speed = speed;
+        
+        Modifier = modifier;
     }
 }
