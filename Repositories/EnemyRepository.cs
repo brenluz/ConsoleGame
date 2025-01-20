@@ -1,4 +1,4 @@
-﻿using Entities;
+﻿using Entities.Enemies;
 
 namespace Repositories;
 

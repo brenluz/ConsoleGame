@@ -15,7 +15,8 @@ public abstract class BaseRepository<T> : IRepository<T> where T : class, IIdent
     {
         return Items;
     }
-
+    
+    // Save method that allows to save an entity onto the repository or update it if it already exists
     public int Save(T entity, bool allowUpdate = true)
     {
         var existing = Get(entity.Id);
